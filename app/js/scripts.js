@@ -25,6 +25,10 @@ $(document).ready(function() {
     });
   });
 
+  $('.slider').slick({
+    dots: true
+  });
+
   $.fn.forceNumbericOnly = function () {
     return this.each(function () {
       $(this).keydown(function (e) {
