@@ -26,7 +26,8 @@ $(document).ready(function() {
   });
 
   $('.slider').slick({
-    dots: true
+    dots: true,
+    appendArrows: $(".slider-arrow")
   });
 
   $.fn.forceNumbericOnly = function () {
