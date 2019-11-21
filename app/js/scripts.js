@@ -27,7 +27,9 @@ $(document).ready(function() {
 
   $('.slider').slick({
     dots: true,
-    appendArrows: $(".slider-arrow")
+    appendDots: $(".slider-dots"),
+    prevArrow: '<button type="button" class="slick-prev"><svg width="16" height="14" viewBox="0 0 16 14" fill="currentColor" stroke="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8L0 6L12 6L8 2L9 0L16 7L9 14L8 12L12 8L0 8Z"/></svg></button>',
+    nextArrow: '<button type="button" class="slick-next"><svg width="16" height="14" viewBox="0 0 16 14" fill="currentColor" stroke="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8L0 6L12 6L8 2L9 0L16 7L9 14L8 12L12 8L0 8Z"/></svg></button>'
   });
 
   $.fn.forceNumbericOnly = function () {

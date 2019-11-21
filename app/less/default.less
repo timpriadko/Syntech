@@ -28,7 +28,7 @@ body{
 	margin: 0;
 
 	&::selection {
-		background: #e8334d;
+		background: #FF5E00;
 		color: #fff;
 	}
 }
@@ -86,7 +86,9 @@ h5{
 	font-size: 20px;
 }
 h6{
-	font-size: 16px;
+	font-size: 14px;
+	line-height: 24px;
+	margin-bottom: 20px;
 }
 p{
 	& + p{
@@ -115,9 +117,23 @@ div.default{
 }
 input:not([type="submit"]){
 	width: 100%;
-	height: 43px;
+	height: 48px;
 	padding: 0 15px;
 	font-size: 16px;
+	background: #333333;
+	border-radius: 8px;
+	border: none;
+	.transition();
+
+	&.dark{
+		background: #333333;
+		border: 2px solid #333333;
+		color: #fff;
+
+		&:focus{
+			border-color: #C63527;
+		}
+	}
 }
 textarea{
 	max-width: 100%;
@@ -135,7 +151,7 @@ address{
 strong{
 	font-weight: 700;
 }
-::-webkit-input-placeholder {color:#fff;}
-::-moz-placeholder          {color:#fff;}
-:-moz-placeholder           {color:#fff;}
-:-ms-input-placeholder      {color:#fff;}
+::-webkit-input-placeholder {color:#999999;}
+::-moz-placeholder          {color:#999999;}
+:-moz-placeholder           {color:#999999;}
+:-ms-input-placeholder      {color:#999999;}

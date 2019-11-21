@@ -30,7 +30,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    .gradient(180deg, #ffffff 0%, #FF8200 95%);
+    .gradient(180deg, #ffffff 0%, @orange 95%);
     opacity: 0.2;
     z-index: -1;
   }
@@ -150,6 +150,8 @@
 }
 
 .testimonials {
+  padding: 110px 0;
+
   .center {
     max-width: 520px;
   }
@@ -203,11 +205,37 @@
       .name {
         text-transform: uppercase;
         color: @black;
+        font-weight: 700;
+        margin-bottom: 4px;
       }
       .profession{
         font-size: 14px;
         line-height: 20px;
+        color: #777777;
       }
     }
   }
+  .green-circle{
+    position: absolute;
+    top: 0;
+    left: -110%;
+
+    &:before{
+      width: 470px;
+      height: 470px;
+    }
+  }
+  .red-circle{
+    position: absolute;
+    top: 0;
+    right: -25%;
+
+    &:before{
+      width: 308px;
+      height: 308px;
+    }
+  }
+}
+.cases{
+  background: #222222;
 }
