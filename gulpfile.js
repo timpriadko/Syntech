@@ -46,6 +46,7 @@ gulp.task('libsjs', ['scripts'], function() {
 	return gulp.src([
 		'app/libs/jquery/jquery-1.11.1.min.js',
 		'app/libs/slick/slick.min.js',
+		'app/libs/jquery-ui/jquery-ui.js',
 		// 'app/libs/magnific-popup/jquery.magnific-popup.min.js',
 	])
 		.pipe(babel({
@@ -59,6 +60,7 @@ gulp.task('libsjs', ['scripts'], function() {
 gulp.task('libscss', ['less'], function(){
 	return gulp.src([
 		'app/libs/slick/slick.css',
+		'app/libs/jquery-ui/jquery-ui.css',
 		// 'app/libs/magnific-popup/magnific-popup.css',
 	])
 		.pipe(concat('libs.min.css'))

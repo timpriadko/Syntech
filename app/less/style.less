@@ -63,8 +63,13 @@
     color: #FFFFFF;
   }
 }
+
 .gray-text{
   color: @gray;
+}
+
+.section{
+  padding: 110px 0;
 }
 
 .link {
@@ -159,11 +164,16 @@
 }
 
 .network{
+  display: flex;
+
   a{
     color: #ffffff;
 
     &:hover{
       color: @orange;
+    }
+    & + a{
+      margin-left: 24px;
     }
   }
 }
@@ -186,14 +196,26 @@
 .list{
   font-size: 16px;
   line-height: 24px;
-  color: #777777;
   .transition();
 
   li{
     font-style: italic;
+    position: relative;
+    padding-left: 10px;
+    text-indent: 10px;
 
+    &:after{
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      left: 0;
+      top: 8px;
+      border-radius: 50%;
+      background: @black;
+    }
     & + li{
-      margin-top: 12px;
+      margin-top: 5px;
     }
   }
 }
@@ -348,4 +370,5 @@
   }
 }
 
-@import url(./pages/index.less);
+@import url(./pages/index);
+@import url(./pages/our-expertise);

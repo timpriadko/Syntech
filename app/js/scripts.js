@@ -13,6 +13,8 @@ $(document).ready(function() {
     $(id).addClass('active');
   });
 
+  $( ".selectmenu" ).selectmenu();
+
   $('.slider').slick({
     dots: true,
     appendDots: $(".slider-dots"),
