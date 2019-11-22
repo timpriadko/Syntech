@@ -2,27 +2,15 @@
 
 $(document).ready(function() {
 
-  // якір
-  $(".go-to").on('click',function(e){
-
+  $('.tab-link').on('click', '.tab', function(e){
     e.preventDefault();
 
-    var anchor = $(this).attr("href");
+    let id = $(this).attr('href');
 
-    if ($(anchor).length) {
-      var run = $(anchor).offset().top;
-      $('body,html').stop().animate({scrollTop: run}, 1500);
-    } else {
-      console.warn("ID don't search!")
-    }
-  });
-
-  $(".mobile-menu").on("click", function(){
-    $("header nav > ul").stop().slideToggle(function(){
-      if ($(this).css('display') === 'none'){
-        $(this).removeAttr('style');
-      }
-    });
+    $(this).parents('.tab-link').find('.active').removeClass('active');
+    $(this).addClass('active');
+    $(id).parents('.tab-container').find('.active').removeClass('active');
+    $(id).addClass('active');
   });
 
   $('.slider').slick({
@@ -36,7 +24,10 @@ $(document).ready(function() {
     vertical: true,
     dots: true,
     verticalSwiping: true,
-    adaptiveHeight: true
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: '<button type="button" class="slick-prev"><svg width="16" height="14" viewBox="0 0 16 14" fill="currentColor" stroke="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8L0 6L12 6L8 2L9 0L16 7L9 14L8 12L12 8L0 8Z"/></svg></button>',
+    nextArrow: '<button type="button" class="slick-next"><svg width="16" height="14" viewBox="0 0 16 14" fill="currentColor" stroke="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8L0 6L12 6L8 2L9 0L16 7L9 14L8 12L12 8L0 8Z"/></svg></button>'
   });
 
   $.fn.forceNumbericOnly = function () {

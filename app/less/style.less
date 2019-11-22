@@ -77,6 +77,16 @@
   }
 }
 
+.tab-container{
+  & > *{
+    display: none;
+
+    &.active{
+      display: block;
+    }
+  }
+}
+
 .mobile-menu {
   display: none;
   background: transparent;
