@@ -48,6 +48,29 @@
   }
 }
 
+.btn-feedback{
+  height: 40px;
+  text-transform: uppercase;
+  background: #F7F7F7;
+  color: @green;
+  border-radius: 100px;
+  margin-bottom: 30px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 25px;
+  font-size: 14px;
+  line-height: 14px;
+  .transition();
+
+  &:hover{
+    background: @green;
+    color: #F7F7F7;
+  }
+  svg{
+    margin-right: 9px;
+  }
+}
+
 .main-content{
   flex: 1;
 }
@@ -84,6 +107,13 @@
   &:hover {
     border-color: transparent;
   }
+}
+
+.link-page{
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  color: @orange;
 }
 
 .tab-container{
@@ -169,6 +199,7 @@
 
 .network{
   display: flex;
+  align-items: center;
 
   a{
     color: #ffffff;
@@ -374,5 +405,50 @@
   }
 }
 
+.we-striving{
+  position: relative;
+  margin-bottom: 12vw;
+
+  .btn{
+    width: 100%;
+  }
+  .container{
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+
+    &:after{
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 70vw;
+      height: 100%;
+      background: linear-gradient(90deg, #7EDDD3 0%, #2AD2C9 49.93%, #009CA6 100%);
+      border-radius: 15px;
+      z-index: 1;
+    }
+    &:before{
+      content: '';
+      width: 100%;
+      height: 90%;
+      right: -17vw;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      position: absolute;
+      background: url(../img/map.svg) no-repeat center/contain;
+      z-index: 2;
+    }
+    & > *{
+      flex: 1 1;
+      position: relative;
+      z-index: 3;
+      margin-right: 190px;
+    }
+  }
+}
+
 @import url(./pages/index);
 @import url(./pages/our-expertise);
+@import url(./pages/project);

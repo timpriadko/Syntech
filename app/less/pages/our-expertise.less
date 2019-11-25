@@ -1,135 +1,93 @@
 @import url(../mixin.less);
 
-.our-expertise-list{
-  .container{
-    margin: -25px -75px;
+.our-expertise-page{
+  .our-expertise-list{
+    .container{
+      margin: -25px -75px;
 
-    & > *{
-      flex: 1 1 350px;
-      margin: 25px 75px;
-    }
-  }
-  .main-title{
-    position: relative;
-
-    &:after{
-      content: '';
-      width: 818px;
-      height: 818px;
-      position: absolute;
-      top: -125px;
-      right: 0;
-      background: url(../img/our-expertise-page/main-title.svg) no-repeat center/contain;
-      z-index: -1;
-    }
-  }
-  .inner-container{
-    & > *{
-      flex: 1 1 250px;
-    }
-  }
-  h3{
-    color: @gray;
-  }
-}
-
-.cases-projects{
-  .main-title{
-    max-width: 300px;
-  }
-  .tab-link{
-    display: flex;
-    margin-bottom: 70px;
-
-    li + li{
-      margin-left: 5vw;
-    }
-  }
-  .container{
-    display: flex;
-    margin: -30px -60px;
-
-    & > *{
-      flex: 1 1 450px;
-      margin: 30px 60px;
-    }
-  }
-  .project-count{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 50px;
-
-    h2{
-      font-weight: 300;
-      margin-bottom: 10px;
-      color: @dark;
-    }
-    h5{
-      color: @gray;
-      text-transform: uppercase;
-    }
-  }
-  .list-projects{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 30px;
-
-    img{
-      display: block;
-    }
-  }
-  .tab-section{
-    .tab{
-      text-transform: uppercase;
-      color: #aaaaaa;
-
-      &.active, &:hover{
-       color: @black;
+      & > *{
+        flex: 1 1 350px;
+        margin: 25px 75px;
       }
     }
-  }
-}
-
-.we-striving{
-  position: relative;
-  margin-bottom: 12vw;
-
-  .btn{
-    width: 100%;
-  }
-  .container{
-    display: flex;
-    align-items: flex-start;
-    position: relative;
-
-    &:after{
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 70vw;
-      height: 100%;
-      background: linear-gradient(90deg, #7EDDD3 0%, #2AD2C9 49.93%, #009CA6 100%);
-      border-radius: 15px;
-      z-index: 1;
-    }
-    &:before{
-      content: '';
-      width: 100%;
-      height: 90%;
-      right: -17vw;
-      top: 0;
-      bottom: 0;
-      margin: auto;
-      position: absolute;
-      background: url(../img/map.svg) no-repeat center/contain;
-      z-index: 2;
-    }
-    & > *{
-      flex: 1 1;
+    .main-title{
       position: relative;
-      z-index: 3;
-      margin-right: 190px;
+
+      &:after{
+        content: '';
+        width: 818px;
+        height: 818px;
+        position: absolute;
+        top: -125px;
+        right: 0;
+        background: url(../img/our-expertise-page/main-title.svg) no-repeat center/contain;
+        z-index: -1;
+      }
+    }
+    .inner-container{
+      & > *{
+        flex: 1 1 250px;
+      }
+    }
+    h3{
+      color: @gray;
+    }
+  }
+
+  .cases-projects{
+    .main-title{
+      max-width: 300px;
+    }
+    .tab-link{
+      display: flex;
+      margin-bottom: 70px;
+
+      li + li{
+        margin-left: 5vw;
+      }
+    }
+    .container{
+      display: flex;
+      margin: -30px -60px;
+
+      & > *{
+        flex: 1 1 450px;
+        margin: 30px 60px;
+      }
+    }
+    .project-count{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 50px;
+
+      h2{
+        font-weight: 300;
+        margin-bottom: 10px;
+        color: @dark;
+      }
+      h5{
+        color: @gray;
+        text-transform: uppercase;
+      }
+    }
+    .list-projects{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 30px;
+
+      img{
+        display: block;
+      }
+    }
+    .tab-section{
+      .tab{
+        text-transform: uppercase;
+        color: #aaaaaa;
+
+        &.active, &:hover{
+          color: @black;
+        }
+      }
     }
   }
 }
