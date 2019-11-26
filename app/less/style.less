@@ -113,7 +113,6 @@
   font-weight: 600;
   font-size: 24px;
   line-height: 36px;
-  color: @orange;
 }
 
 .tab-container{
@@ -258,7 +257,7 @@
 .green-circle{
   &:before{
     background: linear-gradient(90deg, #7EDDD3 0%, #2AD2C9 49.93%, #009CA6 100%);
-    box-shadow: 0px 8px 32px rgba(70, 185, 181, 0.5);
+    box-shadow: 0 8px 32px rgba(70, 185, 181, 0.5);
     height: 614px;
     width: 614px;
   }
@@ -267,7 +266,7 @@
 .red-circle{
   &:before{
     background: linear-gradient(270deg, #C63527 0%, #FF5E00 49.93%, @orange 100%);
-    box-shadow: 0px 8px 32px rgba(201, 65, 15, 0.5);
+    box-shadow: 0 8px 32px rgba(201, 65, 15, 0.5);
     height: 536px;
     width: 536px;
   }
@@ -276,7 +275,7 @@
 .blue-circle{
   &:before{
     background: linear-gradient(270deg, #3E4BA3 0%, #6941C6 49.55%, #7F4AAE 100%);
-    box-shadow: 0px 8px 32px rgba(48, 44, 177, 0.5);
+    box-shadow: 0 8px 32px rgba(48, 44, 177, 0.5);
     width: 672px;
     height: 672px;
   }
@@ -449,6 +448,83 @@
   }
 }
 
+.box-top {
+  h1 {
+    & + p {
+      text-align: justify;
+    }
+  }
+  h3{
+    color: rgba(255, 255, 255, 0.6);
+  }
+  a{
+    color: @orange;
+
+    &:hover{
+      color: #FFFFFF;
+    }
+  }
+  .inner {
+    background-color: @black;
+    .bg-image;
+    min-height: 700px;
+    max-width: 1190px;
+    padding-left: 120px;
+    padding-right: 275px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 15px;
+
+    &:before {
+      bottom: 0;
+      right: -200px;
+      left: auto;
+      margin: auto;
+      z-index: 1;
+      width: 400px;
+      height: 400px;
+    }
+
+    & > * {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  .share-it {
+    display: flex;
+    align-items: center;
+
+    .network {
+      display: inline-flex;
+      margin-left: 15px;
+    }
+  }
+}
+
+.send-message{
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  padding: 60px;
+
+  .ok{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: @orange;
+    border: 4px solid #FFFFFF;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+    width: 94px;
+    height: 94px;
+    border-radius: 50%;
+    margin-bottom: 40px;
+  }
+}
+
 @import url(./pages/index);
 @import url(./pages/our-expertise);
 @import url(./pages/project);
+@import url(./pages/contact-us);
+@import url(./pages/our-services);

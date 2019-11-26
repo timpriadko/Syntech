@@ -1,0 +1,45 @@
+@import url(../mixin.less);
+
+.our-services-page{
+  .box-top{
+    .what-we-do{
+      display: flex;
+      margin: -15px;
+
+      .item{
+        position: relative;
+        padding-left: 38px;
+        margin: 15px;
+        font-size: 16px;
+        line-height: 24px;
+        text-transform: uppercase;
+
+        &:before{
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 32px;
+          height: 32px;
+          border-radius: 6px;
+          background: linear-gradient(90deg, #7EDDD3 0%, #2AD2C9 49.93%, #009CA6 100%);
+        }
+        &:after{
+          content: '';
+          position: absolute;
+          top: 2.2px;
+          left: 2.1px;
+          background: #333;
+          width: 27px;
+          height: 27.9px;
+          border-radius: 3px;
+        }
+        &.red{
+          &:before{
+            background: linear-gradient(90deg, #7EDDD3 0%, #2AD2C9 49.93%, #009CA6 100%);
+          }
+        }
+      }
+    }
+  }
+}
