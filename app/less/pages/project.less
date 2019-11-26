@@ -49,7 +49,12 @@
   .project-box-description {
     .container {
       display: flex;
+      flex-wrap: wrap;
+      margin: -25px -76px;
 
+      & > *{
+        margin: 25px 76px;
+      }
       h3{
         color: @gray;
       }
@@ -58,10 +63,31 @@
       }
       .text{
         min-width: 250px;
+        flex: 1;
       }
       .image{
-        flex: 1;
+        flex: 1 1 700px;
         display: grid;
+        grid-gap: 2vw;
+        grid-template-columns: repeat(4, 1fr);
+
+        div:first-child{
+          grid-column: ~'1 / 3';
+          grid-row: 1 e("/") 3;
+        }
+        div{
+          .bg-image;
+
+          &:after{
+            content: '';
+            padding-top: 70%;
+            display: block;
+          }
+        }
+
+        img{
+          display: block;
+        }
       }
     }
   }
