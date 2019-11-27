@@ -11,6 +11,8 @@ $(document).ready(function() {
     $(this).addClass('active');
     $(id).parents('.tab-container').find('.active').removeClass('active');
     $(id).addClass('active');
+
+    $('.slider-case').slick('setPosition');
   });
 
   $( ".selectmenu" ).selectmenu();
@@ -23,11 +25,10 @@ $(document).ready(function() {
   });
 
   $('.slider-case').slick({
-    vertical: true,
     dots: true,
-    verticalSwiping: true,
     slidesToShow: 1,
     slidesToScroll: 1,
+    fade: true,
     prevArrow: '<button type="button" class="slick-prev"><svg width="16" height="14" viewBox="0 0 16 14" fill="currentColor" stroke="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8L0 6L12 6L8 2L9 0L16 7L9 14L8 12L12 8L0 8Z"/></svg></button>',
     nextArrow: '<button type="button" class="slick-next"><svg width="16" height="14" viewBox="0 0 16 14" fill="currentColor" stroke="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8L0 6L12 6L8 2L9 0L16 7L9 14L8 12L12 8L0 8Z"/></svg></button>'
   });

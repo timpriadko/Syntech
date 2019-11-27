@@ -173,34 +173,22 @@
   }
 }
 
-.slider-dots{
-  margin-top: 50px;
+.slick-dots{
+  display: flex!important;
 
-  .slick-dots{
-    display: flex!important;
-    align-items: center;
-    min-height: 20px;
-
-    li{
-      display: flex;
-      align-items: center;
-    }
+  button{
+    background: transparent;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #777777;
+    font-size: 0;
+    .transition();
+  }
+  .slick-active{
     button{
-      border-radius: 50%;
-      background: transparent;
-      width: 12px;
-      height: 12px;
-      border: 1px solid #AAAAAA;
-      font-size: 0;
-      margin-right: 16px;
-      .transition();
-    }
-    .slick-active{
-      button{
-        border: 3px solid @green;
-        width: 18px;
-        height: 18px;
-      }
+      box-shadow: 0 0 0 3px @orange;
+      border-color: @orange;
     }
   }
 }
@@ -542,3 +530,4 @@
 @import url(./pages/project);
 @import url(./pages/contact-us);
 @import url(./pages/our-services);
+@import url(./pages/articles);
