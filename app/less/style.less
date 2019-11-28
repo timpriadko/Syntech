@@ -525,9 +525,100 @@
   }
 }
 
+.pagination{
+  font-size: 19.2982px;
+  line-height: 28px;
+  display: flex;
+  margin: 120px 0 160px;
+
+  a{
+    color: #CCCCCC;
+    border-bottom: 2px solid #CCCCCC;
+    padding: 5px 10px;
+
+    &:hover, &.active{
+      color: @green;
+      border-color: @green;
+    }
+  }
+}
+
+.radio-item{
+  & + .radio-item{
+    margin-top: 15px;
+  }
+  input{
+    display: none;
+
+    &:checked{
+      & + label{
+        &:after {
+          transform: scale(1);
+          background: #FF8200;
+        }
+      }
+    }
+  }
+  label{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #888;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 18px;
+      height: 18px;
+      border: 1px solid #ddd;
+      border-radius: 100%;
+      background: #fff;
+    }
+    &:after{
+      content: '';
+      width: 12px;
+      height: 12px;
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      border-radius: 50%;
+      transform: scale(0);
+      .transition();
+    }
+  }
+}
+
+.contact-us-form{
+  margin-top: 60px;
+  border-radius: 15px;
+  background: #F7F7F7;
+  padding: 30px 50px 0 50px;
+
+  h4{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .wrap-btn{
+    position: relative;
+    bottom: -20px;
+
+    .btn{
+      margin-top: 15px;
+      width: 100%;
+    }
+  }
+}
+
 @import url(./pages/index);
 @import url(./pages/our-expertise);
 @import url(./pages/project);
 @import url(./pages/contact-us);
 @import url(./pages/our-services);
-@import url(./pages/articles);
+@import url(pages/blog);

@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Project</title>
+  <title>Blog</title>
   <meta name="description" content="Розробник сайтів на PHP,HTML,CSS,Jquery,CMS">
   <meta name="author" content="main.email.seryoga@gmail.com">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
@@ -20,7 +20,7 @@
   <meta property="og:site_name" content="seryogagithub.github.io"/>
 
 </head>
-<body class="articles-page">
+<body class="blog-page">
 <header class="main-header">
   <div class="center">
     <div class="container">
@@ -60,9 +60,9 @@
     <div class="center">
       <div class="container">
         <div>
-          <div class="preview-article">
+          <a href="#" class="preview-article">
             <div>
-              <div class="image" style="background-image: url(img/articles-page/1.jpg)"></div>
+              <div class="image" style="background-image: url(img/blog-page/articles/1.jpg)"></div>
             </div>
 
             <div>
@@ -72,11 +72,39 @@
                 Adamant: automation of the production process of metal parts and construction
               </h3>
             </div>
-          </div><!-- .preview-article -->
+          </a><!-- .preview-article -->
 
-          <div class="preview-article">
+          <a href="#" class="preview-article">
             <div>
-              <div class="image" style="background-image: url(img/articles-page/1.jpg)"></div>
+              <div class="image" style="background-image: url(img/index-page/hi-tree-full.jpg)"></div>
+            </div>
+
+            <div>
+              <div class="date">May 28, 2019</div>
+
+              <h3>
+                What does an IT Strategy mean? Some tips for its creating
+              </h3>
+            </div>
+          </a><!-- .preview-article -->
+
+          <a href="#" class="preview-article">
+            <div>
+              <div class="image" style="background-image: url(img/blog-page/articles/3.jpg)"></div>
+            </div>
+
+            <div>
+              <div class="date">May 28, 2019</div>
+
+              <h3>
+                Your Business Needs Custom Software Development: 7 reasons why
+              </h3>
+            </div>
+          </a><!-- .preview-article -->
+
+          <a href="#" class="preview-article">
+            <div>
+              <div class="image" style="background-image: url(img/blog-page/articles/4.jpg)"></div>
             </div>
 
             <div>
@@ -86,11 +114,11 @@
                 Adamant: automation of the production process of metal parts and construction
               </h3>
             </div>
-          </div><!-- .preview-article -->
+          </a><!-- .preview-article -->
 
-          <div class="preview-article">
+          <a href="#" class="preview-article">
             <div>
-              <div class="image" style="background-image: url(img/articles-page/1.jpg)"></div>
+              <div class="image" style="background-image: url(img/blog-page/articles/5.jpg)"></div>
             </div>
 
             <div>
@@ -100,11 +128,11 @@
                 Adamant: automation of the production process of metal parts and construction
               </h3>
             </div>
-          </div><!-- .preview-article -->
+          </a><!-- .preview-article -->
 
-          <div class="preview-article">
+          <a href="#" class="preview-article">
             <div>
-              <div class="image" style="background-image: url(img/articles-page/1.jpg)"></div>
+              <div class="image" style="background-image: url(img/blog-page/articles/6.jpg)"></div>
             </div>
 
             <div>
@@ -114,9 +142,73 @@
                 Adamant: automation of the production process of metal parts and construction
               </h3>
             </div>
-          </div><!-- .preview-article -->
+          </a><!-- .preview-article -->
+
+          <ul class="pagination">
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#" class="active">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+          </ul>
         </div><!-- div -->
-      </div>
+
+        <div>
+          <h5>Categories</h5>
+
+
+          <div class="radio-item">
+            <input type="radio" id="contactChoice1"
+                   name="contact" value="all_articles" checked>
+            <label for="contactChoice1">All articles</label>
+          </div>
+          <div class="radio-item">
+            <input type="radio" id="contactChoice2"
+                   name="contact" value="business">
+            <label for="contactChoice2">Business</label>
+          </div>
+          <div class="radio-item">
+            <input type="radio" id="contactChoice3"
+                   name="contact" value="business_advice">
+            <label for="contactChoice3">Business advice</label>
+          </div>
+          <div class="radio-item">
+            <input type="radio" id="contactChoice4"
+                   name="contact" value="development">
+            <label for="contactChoice4">Development</label>
+          </div>
+
+          <form class="contact-us-form">
+            <h4>Contact us</h4>
+
+            <div class="default">
+              <input type="text" placeholder="Your full name">
+            </div>
+
+            <div class="default">
+              <input type="email" placeholder="Your email address">
+            </div>
+
+            <div class="default">
+              <select class="selectmenu" name="contuct_us_select">
+                <option disabled selected>Select required service</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
+              </select>
+            </div>
+
+            <div class="default">
+              <textarea name="" id="" rows="4" placeholder="Write a message ..."></textarea>
+            </div>
+
+            <div class="wrap-btn">
+              <button type="submit" class="btn">Send message</button>
+            </div>
+          </form>
+        </div><!-- div -->
+      </div><!-- .container -->
     </div>
   </section>
 </main>
