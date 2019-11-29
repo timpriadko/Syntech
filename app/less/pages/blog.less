@@ -12,6 +12,7 @@
       margin-top: 20px;
     }
   }
+
   .filter{
     h5{
       color: #CCCCCC;
@@ -59,6 +60,22 @@
   }
 
   .article{
+    text-align: justify;
+
+    p{
+      font-size: 16px;
+      line-height: 30px;
+
+      & + h4, & + h5{
+        margin-top: 30px;
+      }
+    }
+    h1, h2, h3, h4, h5, h6{
+      & + p{
+        font-size: 16px;
+        line-height: 30px;
+      }
+    }
     h3{
       font-weight: 400;
       margin-bottom: 20px;
@@ -70,12 +87,32 @@
     img{
       display: block;
       margin: 60px auto;
+      border-radius: 15px;
     }
-    .container{
+    & > * > .container{
       display: grid;
       grid-template-columns: 215px 1fr;
       grid-gap: 30px;
     }
+
+    .list{
+      margin: 50px 0;
+      color: #888888;
+
+      li{
+        & + li{
+          margin-top: 15px;
+        }
+        &:after{
+          background-color: #888888;
+        }
+      }
+    }
+
+    .wrap{
+      max-width: 950px;
+    }
+
     .network{
       a{
         color: @green;
