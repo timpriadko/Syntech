@@ -143,6 +143,12 @@
   }
 }
 
+.city{
+  font-size: 14px;
+  line-height: 20px;
+  color: #999999;
+}
+
 .slick-arrow{
   width: 48px;
   height: 48px;
@@ -601,6 +607,7 @@
   background: #F7F7F7;
   padding: 30px 50px 0 50px;
   display: flex;
+  flex-direction: column;
 
   h4{
     text-align: center;
@@ -615,7 +622,15 @@
       line-height: 26px;
     }
   }
+  .send{
+    img{
+      margin-bottom: 45px;
+    }
 
+    padding: 14px 10px 38px;
+    text-align: center;
+
+  }
   .container{
     display: grid;
     grid-template-columns: 1fr minmax(190px, 360px);
@@ -631,6 +646,18 @@
       color: #FFFFFF;
       margin-bottom: 24px;
     }
+  }
+  &.multicolor{
+    background: linear-gradient(270deg, #3E4BA3 0%, #6941C6 49.55%, #7F4AAE 100%);
+
+    h4, h2, p{
+      color: #fff;
+    }
+  }
+  .input-label{
+    background-image: url(../img/icons/inputfile.svg);
+    background-position: center right 17px;
+    background-repeat: no-repeat;
   }
 
   .wrap-btn{
@@ -669,4 +696,5 @@
 @import url(./pages/project);
 @import url(./pages/contact-us);
 @import url(./pages/our-services);
-@import url(pages/blog);
+@import url(./pages/blog);
+@import url(./pages/vacancies);

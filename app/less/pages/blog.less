@@ -70,29 +70,38 @@
         margin-top: 30px;
       }
     }
+
     h1, h2, h3, h4, h5, h6{
       & + p{
         font-size: 16px;
         line-height: 30px;
       }
     }
+
     h3{
       font-weight: 400;
       margin-bottom: 20px;
     }
+
     h4{
       font-weight: 400;
       margin-bottom: 10px;
     }
+
     img{
       display: block;
       margin: 60px auto;
       border-radius: 15px;
     }
-    & > * > .container{
+
+    .main-container{
       display: grid;
       grid-template-columns: 215px 1fr;
       grid-gap: 30px;
+
+      & > *{
+        min-width: 0;
+      }
     }
 
     .list{
@@ -119,6 +128,62 @@
 
         &:hover{
           color: @orange;
+        }
+      }
+    }
+    .related-posts-container{
+      margin-top: 170px;
+
+      h5{
+        color: @gray;
+        font-weight: normal;
+      }
+      .related-posts-arrow{
+        position: relative;
+        display: flex;
+        flex: initial;
+
+        .slick-arrow{
+          background: #2AD2C9;
+          color: #FFFFFF;
+          border: 2px solid #2AD2C9;
+          position: relative;
+          left: auto;
+          right: auto;
+        }
+      }
+
+      .related-posts{
+        margin-bottom: 212px;
+        padding-top: 50px;
+        border-top: 1px solid #CCCCCC;
+        overflow: hidden;
+        text-align: initial;
+
+        a:hover{
+          h3{
+            color: @orange;
+          }
+        }
+        h3{
+          font-weight: bold;
+          color: #009CA6;
+          .transition();
+        }
+        .date{
+          margin: 0 -6px;
+          margin-bottom: 10px;
+
+          span{
+            display: inline-block;
+            margin: 0 6px;
+          }
+        }
+        .slick-list{
+          margin: 0 -76px;
+        }
+        .slick-slide{
+          margin: 0 76px;
         }
       }
     }

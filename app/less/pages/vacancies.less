@@ -1,0 +1,68 @@
+@import url(../mixin.less);
+
+.vacancy-page {
+  .left{
+    flex: 2 1 350px;
+  }
+  .vacancies-form{
+    padding-bottom: 150px;
+
+    .item{
+      h3{
+        margin-bottom: 0;
+      }
+      p{
+        text-align: justify;
+      }
+      & + .item{
+        margin-top: 50px;
+      }
+    }
+    .city{
+      margin-bottom: 10px;
+      margin-top: 5px;
+    }
+
+    .container{
+      margin: -30px -76px;
+
+      & > *{
+        margin: 30px 76px;
+      }
+    }
+  }
+
+  .vacancy-article{
+    padding-bottom: 226px;
+
+    &:after{
+      content: '';
+      width: 904px;
+      height: 904px;
+      background: url(../img/vacancy-page/vacancy-article.svg) no-repeat center/contain;
+      position: absolute;
+      right: -212px;
+      top: 0px;
+      z-index: -1;
+    }
+    h1{
+      margin-bottom: 0;
+    }
+    h5{
+      margin-top: 40px;
+      color:  #888888;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .wrap{
+      max-width: 827px;
+    }
+    .city{
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+    .contact-us-form{
+      max-width: 1195px;
+    }
+  }
+}
