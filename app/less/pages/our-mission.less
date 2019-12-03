@@ -1,0 +1,77 @@
+@import url(../mixin.less);
+
+.our-mission-page{
+  .nice-to-meet-you{
+    .image{
+      .inner{
+        margin-right: -250px;
+      }
+    }
+  }
+
+  .our-mission{
+    padding-bottom: 400px;
+
+    .left{
+      position: relative;
+
+      &:after{
+        content: '';
+        position: absolute;
+        top: -190px;
+        left: -85px;
+        width: 490px;
+        height: 490px;
+        background: url(../img/our-mission-page/our-mission.svg) no-repeat center/contain;
+        z-index: -1;
+      }
+    }
+  }
+
+  .working-with-us{
+    position: relative;
+    padding-top: 290px;
+
+    .red-circle{
+      &:before{
+        right: 0;
+        left: auto;
+        top: -410px;
+      }
+    }
+
+    p + h3{
+      margin-top: 50px;
+    }
+    .bg-gradient{
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(0deg, rgba(255, 130, 0, 0) 26.04%, #FF8200 100%);
+      opacity: 0.1;
+    }
+    .flex-container{
+      margin: -30px -76px;
+
+      & > *{
+        margin: 30px 76px;
+      }
+    }
+    .experience{
+      margin-top: 50px;
+    }
+    .as-well-as{
+      margin-top: 130px;
+
+      .left{
+        &:before{
+          top: 10vw;
+          left: 15vw;
+          width: 245px;
+          height: 245px;
+        }
+      }
+    }
+  }
+}
